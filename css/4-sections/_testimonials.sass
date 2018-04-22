@@ -1,0 +1,57 @@
+.testimonials
+
+  .testimonials-container
+    max-width: 500px
+    position: relative
+
+    ul 
+      display: flex
+      padding: 0
+      overflow: hidden
+      li
+        min-width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .user-data
+          display: flex
+          flex-direction: column
+          align-items: center
+          img 
+            max-width: 130px
+            border-radius: 50%
+          .user-name
+            display: block
+            margin: 15px 0
+          p 
+            font-style: italic
+            font-size: 20px
+            color: #cccccc
+            text-align: center
+
+
+  .arrow
+    display: inline-block
+    position: absolute
+    top: 50%
+    border: 3px solid #eeeeee
+    padding: 20px
+    border-width: 0 3px 3px 0
+    cursor: pointer
+    transition: opacity .3s ease
+    &-left 
+      transform: rotate(135deg)
+      right: 120%
+    &-right
+      transform: rotate(-45deg)
+      left: 120%
+    &:hover 
+      border-color: $accent-color
+      
+
+
+
+
+             
+        

@@ -1,3 +1,108 @@
+header 
+  position: relative
+
+
+
 .main-banner
   display: block
   width: 100%
+
+header nav 
+  position: fixed
+  background: rgba(black, .5)
+  width: 100%
+  padding: 10px 0
+  z-index: 999
+
+  ul.navigation
+    margin: 0
+    padding: 0
+    display: flex
+    li
+      &:last-child
+      padding-right: 0
+      
+
+    a 
+      display: block
+      color: #ffffff
+      font-size: 1rem
+      text-transform: uppercase
+      padding: 0 16px
+      position: relative
+      &::after 
+        content: ""
+        display: block
+        position: absolute
+        height: 1px
+        width: 0
+        background-color: white
+        opacity: 0
+        transition: all .3 ease  
+
+    a
+      &::hover
+        &::after
+          width: 100%
+          opacity: 1
+
+
+      
+//ul.navigation a:after
+  //&::hover
+    //width: 100%
+    
+      
+.logo 
+  color: white
+  width: 60px
+  height: 60px
+  font-size: 26px
+  text-decoration: none
+  border: solid 2px white
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 50%
+
+
+.header-text 
+  position: absolute
+  width: 100%
+  height: 100%
+  display: flex 
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: rgba(black, .5)
+  color: #ffffff
+  
+  
+  .arrow 
+    display: inline-block
+    border: 3px solid white 
+    padding: 20px
+    border-width: 0 3px 3px 0
+    transform: rotate(45deg)
+    cursor: pointer
+    transition: opacity .3s ease
+    &:hover 
+      opacity: .7
+
+
+
+
+//Animations
+
+.pulsate 
+  animation: pulsate 3s ease-in-out
+  animation-iteration-count: infinite
+  opacity: .3
+  
+@keyframes pulsate
+  0%
+    opacity: .3
+  50%
+    opacity: 1
+  100%
+    opacity: 0.3

@@ -1,0 +1,36 @@
+.gallery
+  display: flex 
+  flex-wrap: wrap
+  margin: 0
+  padding: 0
+
+
+  li 
+    position: relative
+    overflow: hidden
+    width: 20%
+    cursor: pointer 
+    &:hover
+      transform: scale(1.1)
+      z-index: 5
+
+    img 
+      display: block
+      position: relative
+      width: 100%
+      transition: all 3s ease-in-out
+      
+.gallery li:after
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(black, .5)
+  
+.gallery li:hover 
+  &:after 
+    width: 0
+    height: 0

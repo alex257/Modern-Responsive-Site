@@ -9,7 +9,7 @@ header
 
 header nav 
   position: fixed
-  background: rgba(black, .5)
+  background: rgba(black, .7)
   width: 100%
   padding: 10px 0
   z-index: 999
@@ -29,21 +29,23 @@ header nav
       font-size: 1rem
       text-transform: uppercase
       padding: 0 16px
+      letter-spacing: 1.2px
       position: relative
-      &::after 
+      font-weight: 500
+      &:after 
         content: ""
         display: block
         position: absolute
-        height: 1px
+        height: 1.7px
         width: 0
         background-color: white
         opacity: 0
         transition: all .3 ease  
 
     a
-      &::hover
-        &::after
-          width: 100%
+      &:hover
+        &:after
+          width: 80%
           opacity: 1
 
 

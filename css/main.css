@@ -497,7 +497,7 @@ header nav {
         width: 0;
         background-color: white;
         opacity: 0;
-        transition: all 0.3 ease; }
+        transition: all 0.3s ease; }
       header nav ul.navigation a:hover:after {
         width: 75%;
         opacity: 1; }

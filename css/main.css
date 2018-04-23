@@ -468,19 +468,24 @@ header {
   display: block;
   width: 100%; }
 
-header nav {
-  position: fixed;
+.nav-fixed {
   background: rgba(0, 0, 0, 0.7);
+  margin: 0; }
+
+.header-nav {
+  position: fixed;
+  margin: 10px 0;
   width: 100%;
   padding: 10px 0;
-  z-index: 999; }
-  header nav ul.navigation {
+  z-index: 999;
+  transition: all 0.3s ease; }
+  .header-nav ul.navigation {
     margin: 0;
     padding: 0;
     display: flex; }
-    header nav ul.navigation li {
+    .header-nav ul.navigation li {
       padding-right: 0; }
-    header nav ul.navigation a {
+    .header-nav ul.navigation a {
       display: block;
       color: #ffffff;
       font-size: 1rem;
@@ -489,7 +494,7 @@ header nav {
       letter-spacing: 1.2px;
       position: relative;
       font-weight: 500; }
-      header nav ul.navigation a:after {
+      .header-nav ul.navigation a:after {
         content: "";
         display: block;
         position: absolute;
@@ -498,7 +503,7 @@ header nav {
         background-color: white;
         opacity: 0;
         transition: all 0.3s ease; }
-      header nav ul.navigation a:hover:after {
+      .header-nav ul.navigation a:hover:after {
         width: 75%;
         opacity: 1; }
 
@@ -579,6 +584,35 @@ header nav {
 .gallery li:hover:after {
   width: 0;
   height: 0; }
+
+.backdrop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center; }
+
+.backdrop img {
+  max-width: 80%; }
+
+span.backdrop-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  color: #ffffff;
+  border: 1px solid white;
+  cursor: pointer; }
 
 footer {
   padding: 10px 0;

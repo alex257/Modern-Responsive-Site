@@ -2,17 +2,24 @@ header
   position: relative
 
 
-
 .main-banner
   display: block
   width: 100%
 
-header nav 
-  position: fixed
+//js 
+.nav-fixed
   background: rgba(black, .7)
+  margin: 0
+   
+
+
+.header-nav 
+  position: fixed
+  margin: 10px 0
   width: 100%
   padding: 10px 0
   z-index: 999
+  transition: all .3s ease
 
   ul.navigation
     margin: 0
@@ -22,7 +29,6 @@ header nav
       &:last-child
       padding-right: 0
       
-
     a 
       display: block
       color: #ffffff
@@ -100,4 +106,6 @@ header nav
   50%
     opacity: 1
   100%
-    opacity: 0.3
+    opacity: .3
+
+

@@ -10,7 +10,8 @@ header
 .nav-fixed
   background: rgba(black, .7)
   margin: 0
-   
+  +mQ($sm)
+    background: none
 
 
 .header-nav 
@@ -20,15 +21,36 @@ header
   padding: 10px 0
   z-index: 999
   transition: all .3s ease
-
+  +mQ($sm)
+    position: absolute
+  
   ul.navigation
     margin: 0
     padding: 0
     display: flex
+    +mQ($sm)
+      padding: 0
+      margin: 0
+      max-height: 0
+      overflow: hidden
+      background: rgba(black, .7)
+      transition: max-height .6 ease
+    &-opened 
+      max-height: 500px
+      transition: max-height 1.3s ease
+
+    
+
     li
       &:last-child
-      padding-right: 0
+        padding-right: 0
+        padding-top: 20px
+        border-bottom: none
+      &:first-child
+        padding-top: 20px
+
       
+
     a 
       display: block
       color: #ffffff
@@ -38,6 +60,15 @@ header
       letter-spacing: 1.2px
       position: relative
       font-weight: 500
+      +mQ($sm)
+        padding: 10px 0
+        display: block
+        color: #ffffff
+        border-bottom: solid 1px #999999
+      
+      
+
+
       &:after 
         content: ""
         display: block
@@ -53,7 +84,18 @@ header
           width: 75%
           opacity: 1
 
-      
+.nav-toggle
+  color: #ffffff
+  position: relative
+  span,span:before, span:after
+    content: ''
+    padding: 2px
+    color: black
+    height: 2px
+    display: block 
+    position: relative
+    z-index: 9999
+
 .logo 
   color: white
   width: 60px
@@ -65,6 +107,10 @@ header
   justify-content: center
   align-items: center
   border-radius: 50%
+  +mQ($sm)
+    font-size: 1.1rem
+    width: 50px
+    height: 50px
 
 
 .header-text 
@@ -87,6 +133,9 @@ header
     transform: rotate(45deg)
     cursor: pointer
     transition: opacity .3s ease
+    +mQ($sm)
+      //font-size: 1.1rem
+      padding: 10px
     &:hover 
       opacity: .7
 

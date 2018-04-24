@@ -11,6 +11,35 @@
         }
 	}
 
+   const reorderResponsiveMenu = () =>{
+	 const pageWidth = window.innerWidth;
+	 const navContainer = document.querySelector(".header-nav.wrapper");
+	 const navigation = document.querySelector(".header-nav.navigation");
+	 const mobileNavigation = document.querySelector("body >.navigation");
+
+
+	 if (pageWidth <= mobileWidth) {
+
+	 document.body.insertAdjacentElement("afterbegin", navigation);
+	} else if (pageWidth > mobileWidth && mobileNavigation){
+		navContainer.insertAdjacentElement ("beforeend", mobileNavigation );
+	}
+   }
+
+  const mobileMenuToggle = ()=> {
+	const menuToggle = document.querySelector(".nav-toogle");
+	menuToggle.addEventListener("click", ()=> {
+		const mobileNavigation = document.querySelector("body >.navigation");
+		mobileNavigation.classList.toggle("navigation-opened)")
+	}
+	)}
+
+
+
+
+
+
+
 	const onNavItemClick = () => {
 		const navItemList = document.querySelectorAll(".section-link");
 		const navItems = [...navItemList];
@@ -95,7 +124,13 @@
 		addMenuBackground();
 	})
 
+	window.addEventListener("resize", () => {
+		reorderResponsiveMenu();
+	})
+
+    reorderResponsiveMenu();
 	onNavItemClick();
+	mobileMenuToggle();
 	onTestimonialChange();
 	onGalleryImageClick();
 

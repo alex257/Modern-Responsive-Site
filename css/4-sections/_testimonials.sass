@@ -3,7 +3,9 @@
   .testimonials-container
     max-width: 500px
     position: relative
-
+    +mQ($sm)
+      width: 90%
+      
     ul 
       display: flex
       padding: 0
@@ -26,9 +28,11 @@
             margin: 15px 0
           p 
             font-style: italic
-            font-size: 20px
+            font-size: 1.1rem
             color: darken(#cccccc, 20%)
             text-align: center
+            +mQ($sm)
+              font-size: .9rem
 
 
   .arrow
@@ -40,12 +44,19 @@
     border-width: 0 3px 3px 0
     cursor: pointer
     transition: opacity .3s ease
+    +mQ($sm)
+      padding: 10px
+
     &-left 
       transform: rotate(135deg)
       right: 120%
+      +mQ($md)
+        right: 100%
     &-right
       transform: rotate(-45deg)
       left: 120%
+      +mQ($md)
+        left: 100%
     &:hover 
       border-color: $accent-color
       
